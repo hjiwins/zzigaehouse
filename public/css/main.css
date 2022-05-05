@@ -16,8 +16,18 @@ html, body {
 }
 html footer, body footer {
   text-align: center;
+  background-color: #ffe078;
+  color: #666666;
+  padding: 15px 0;
+}
+html footer p, body footer p {
+  color: #764c2b;
+  font-size: 0.8rem;
 }
 html .wrapper, body .wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   flex: 1;
 }
 html .full-height, body .full-height {
@@ -39,6 +49,28 @@ html .top-right, body .top-right {
 html .content, body .content {
   text-align: center;
 }
+html .content p, body .content p {
+  margin-bottom: 15px;
+}
+html .content .main-image, body .content .main-image {
+  width: 100%;
+  max-width: 300px;
+}
+html .content .order-btn, body .content .order-btn {
+  display: block;
+  background-color: #ff685e;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 4px #0000004a;
+  font-size: 1.1rem;
+  transition: 0.3s all ease;
+}
+html .content .order-btn:hover, body .content .order-btn:hover {
+  background-color: #fa5046;
+  box-shadow: none;
+}
 html .links a, body .links a {
   color: #636b6f;
   padding: 0 25px;
@@ -50,9 +82,6 @@ html .links a, body .links a {
 }
 html .m-b-md, body .m-b-md {
   margin-bottom: 15px;
-}
-html .main-image, body .main-image {
-  max-width: 300px;
 }
 html .title, body .title {
   font-size: 50px;

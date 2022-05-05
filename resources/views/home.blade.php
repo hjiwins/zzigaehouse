@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     {{ __('You are logged in!') }}
+                    <a href="{{ route('zzigaes.index') }}">Check your order</a>
                 </div>
             </div>
         </div>

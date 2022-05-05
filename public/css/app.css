@@ -11286,3 +11286,41 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.py-4 {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin: 0 12px;
+}
+.py-4 .create-zzigae {
+  background-color: #ffe078;
+  max-width: 700px;
+}
+.py-4 .create-zzigae form {
+  display: flex;
+  flex-direction: column;
+}
+.py-4 .create-zzigae form .form-row {
+  display: flex;
+}
+.py-4 .create-zzigae form .form-row label {
+  background-color: #dc3545;
+}
+.py-4 .create-zzigae form .form-row label i {
+  padding: 10px;
+  color: white;
+}
+.py-4 .create-zzigae form input, .py-4 .create-zzigae form select {
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+}
+.py-4 .create-zzigae form fieldset .submit-btn-wrap {
+  width: 100%;
+  text-align: right;
+}
+.py-4 .create-zzigae form fieldset .submit-btn-wrap input[type=submit] {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+}

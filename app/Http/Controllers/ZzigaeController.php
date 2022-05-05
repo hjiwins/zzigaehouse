@@ -7,6 +7,10 @@ use App\Models\Zzigae;
 
 class ZzigaeController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth')->except(['store', 'create']);
+    }
+
     public function index() {
         //$zzigaes = Zzigae::all();
         //$zzigaes = Zzigae::orderBy('name', 'desc')->get();

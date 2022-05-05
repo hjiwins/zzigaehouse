@@ -2,22 +2,21 @@
 
 @section('content')
     <div class="flex-center position-ref full-height">
-        @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+    @if (Route::has('login'))
+        <div class="top-right links">
             @auth
-            <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                <a href="{{ url('/home') }}">Home</a>
             @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
+                <a href="{{ route('login') }}">Login</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                <a href="{{ route('register') }}">Register</a>
             @endif
             @endauth
         </div>
-        @endif
+    @endif
 
         <div class="content">
-            <img src="/img/zzigae.png" alt="zzigae space" class="main-image" />
+            <img src="/img/zzigae.png" alt="zzigae house" class="main-image" />
             <div class="title m-b-md">
                 Zzigae House
             </div>
@@ -26,7 +25,7 @@
             @else
                 <p>The best korean zzigaes</p>
             @endif
-            <a href="/zzigaes/create">Order a zzigae</a>
+            <a href="{{ route('zzigaes.create') }}" class="order-btn">Order a zzigae</a>
         </div>
     </div>
 @endsection

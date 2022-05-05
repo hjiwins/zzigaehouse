@@ -1,12 +1,14 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="wrapper create-zzigae">
     <h1>Make your zzigae</h1>
     <form action="/zzigaes" method="POST">
         @csrf
-        <label for="name">Your name:</label>
-        <input type="text" name="name" id="name">
+        <div class="form-row">
+            <label for="name"><i class="fa-solid fa-user-pen"></i></label>
+            <input type="text" name="name" id="name" placeholder="Name">
+        </div>
         <label for="type">Choose zzigae type</label>
         <select name="type" id="type">
             <option value="kimchi">Kimchi</option>
@@ -23,12 +25,16 @@
         </select>
         <fieldset>
             <label>Extra toppings :</label>
-            <input type="checkbox" name="toppings[]" value="cheese">cheese<br>
-            <input type="checkbox" name="toppings[]" value="mushroom">mushroom<br>
-            <input type="checkbox" name="toppings[]" value="dubu">dubu<br>
-            <input type="checkbox" name="toppings[]" value="chili">chili<br>
-            <input type="checkbox" name="toppings[]" value="ramyeon">ramyeon<br>
-            <input type="submit" value="Order zzigae">
+            <div class="checkbox-wrap">
+                <input type="checkbox" name="toppings[]" value="cheese">cheese<br>
+                <input type="checkbox" name="toppings[]" value="mushroom">mushroom<br>
+                <input type="checkbox" name="toppings[]" value="dubu">dubu<br>
+                <input type="checkbox" name="toppings[]" value="chili">chili<br>
+                <input type="checkbox" name="toppings[]" value="ramyeon">ramyeon<br>
+            </div>
+            <div class="submit-btn-wrap">
+                <input type="submit" value="Order zzigae">
+            </div>
         </fieldset>
     </form>
 </div>

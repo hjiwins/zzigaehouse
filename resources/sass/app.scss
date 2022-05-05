@@ -6,3 +6,44 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.py-4 {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    margin: 0 12px;
+    .create-zzigae {
+        background-color: #ffe078;
+        max-width: 700px;
+        form {
+            display: flex;
+            flex-direction: column;
+            .form-row {
+                display: flex;
+                label {
+                    background-color:#ff7f29;
+                    i {
+                        padding: 10px;
+                        color: white;
+                    }
+                }
+            }
+            input, select {
+                border: none;
+                border-radius: 3px;
+                padding: 5px;
+            }
+            fieldset {
+                .submit-btn-wrap {
+                    width: 100%;
+                    text-align: right;
+                    input[type='submit'] {
+                        background-color: #dc3545;
+                        color: white;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

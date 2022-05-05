@@ -19,11 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/zzigaes', [ZzigaeController::class, 'index']);
-Route::get('/zzigaes/create', [ZzigaeController::class, 'create']);
-Route::post('/zzigaes', [ZzigaeController::class, 'store']);
-Route::get('/zzigaes/{id}', [ZzigaeController::class, 'show']);
-Route::delete('/zzigaes/{id}', [ZzigaeController::class, 'destroy']);
+Route::get('/zzigaes', [ZzigaeController::class, 'index'])->name('zzigaes.index');
+Route::get('/zzigaes/create', [ZzigaeController::class, 'create'])->name('zzigaes.create');
+Route::post('/zzigaes', [ZzigaeController::class, 'store'])->name('zzigaes.store');
+Route::get('/zzigaes/{id}', [ZzigaeController::class, 'show'])->name('zzigaes.show');
+Route::delete('/zzigaes/{id}', [ZzigaeController::class, 'destroy'])->name('zzigaes.destroy');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

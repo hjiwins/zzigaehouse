@@ -16,11 +16,22 @@ html, body {
 
     footer {
         text-align: center;
+        background-color: #ffe078;
+        color: #666666;
+        padding: 15px 0;
+        p {
+            color: #764c2b;
+            font-size: 0.8rem;
+        }
     }
     
     .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
         flex: 1;
     }
+
     .full-height {
         height: 100vh;
     }
@@ -43,6 +54,28 @@ html, body {
     
     .content {
         text-align: center;
+        p {
+            margin-bottom: 15px;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 300px;
+        }
+        .order-btn {
+            display: block;
+            background-color: #ff685e;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 1px 3px 4px #0000004a;
+            font-size: 1.1rem;
+            transition: .3s all ease;
+            &:hover {
+                background-color: #fa5046;
+                box-shadow: none;
+            }
+        }
     }
     
     .links {
@@ -59,10 +92,6 @@ html, body {
     
     .m-b-md {
         margin-bottom: 15px;
-    }
-    
-    .main-image {
-        max-width: 300px;
     }
     
     .title {
